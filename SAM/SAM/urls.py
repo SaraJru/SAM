@@ -24,5 +24,8 @@ from app import views
 urlpatterns = [
     # path('admin/', admin.site.urls),
     path('', views.home, name='home'),
+    path('estudiantes/', views.estudiantes, name='estudiantes'),
+    path('administradores/', views.administradores, name='administradores'),
+    path('acerca_de/', views.Acerca_de, name='AcercaDe'),
 
 ]
