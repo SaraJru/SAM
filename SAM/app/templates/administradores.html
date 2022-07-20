@@ -1,12 +1,36 @@
-{%extends 'base.html' %}
-{%block contenido%}
-<table class="table table-danger table-striped">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../static/CSS/bootstrap.css"> 
+    <title>Home</title>
+</head>
+<body>
+    <h1 class="fst-italic">Bienvenidos</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-4">
+        <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="../templates/home.html">Home     |</a>
+            <a class="nav-link" href="../templates/estudiantes.html">Estudiantes     |</a>
+            <a class="nav-link" href="../templates/administradores.html">Administradores     |</a>
+            <a class="nav-link" href="../templates/AcercaDe.html">Acerca de</a>
+            </div>
+        </div>
+        </div>
+</nav> 
+<br>
+<table class="table table-danger table-striped table table-bordered">
     <thead>
     <tr>
         <th scope="col">#</th>
         <th scope="col">Nombre</th>
         <th scope="col">Apellido</th>
-        <!-- <th scope="col">Handle</th> -->
+        <!-- <th scope="col">Handle</th>  -->
     </tr>
     </thead>
     <tbody>
@@ -14,21 +38,24 @@
         <th scope="row">1</th>
         <td>Mufasa</td>
         <td>Ramirez</td>
-        <!-- <td>@mdo</td> -->
+    
     </tr>
     <tr>
         <th scope="row">2</th>
         <td>Chloe</td>
         <td>Ramirez</td>
         
-        <!-- <td>@fat</td> -->
     </tr>
     <tr>
         <th scope="row">3</th>
         <td>Marta</td>
-        <td>Ramirez</td>
+        <td>Ramirez</td> 
         <!-- <td>@twitter</td> -->
     </tr>
     </tbody>
-</table>
-{%endblock contenido%}
+</table> 
+</body>
+<footer>
+    
+</footer> 
+</html>
