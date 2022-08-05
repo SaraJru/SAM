@@ -1,0 +1,41 @@
+.header{
+    width:100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navg a{
+    color:aliceblue!important;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 23px;
+    padding: 10px 15px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.navg a:hover{
+    background-color: crimson;
+}
+
+.text-header{
+    min-height: 100vh;
+    color:antiquewhite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.text-header h2{
+    font-family:fantasy;
+}
+
+.text-header span{
+    letter-spacing: 5px;
+    font-size: 1.4em;
+    font-family:fantasy;
+}
+.text-header p{
+    font-family: fantasy;
+}
