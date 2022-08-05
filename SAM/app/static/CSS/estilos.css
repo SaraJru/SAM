@@ -39,3 +39,13 @@
 .text-header p{
     font-family: fantasy;
 }
+
+.btn-agregar{
+    padding: 7px 12px;
+    color: aliceblue;
+    background-color: brown;
+}
+
+.btn-agregar:hover{
+    color:aliceblue;
+}
