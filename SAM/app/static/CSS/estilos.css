@@ -44,8 +44,51 @@
     padding: 7px 12px;
     color: aliceblue;
     background-color: brown;
+    border-radius: .7em;
 }
 
 .btn-agregar:hover{
     color:aliceblue;
+}
+
+.btn-guardar{
+    padding: 7px 12px;
+    color: aliceblue;
+    background-color: brown;
+    border-radius: .7em;
+}
+
+.btn-guardar:hover{
+    color:aliceblue;
+}
+
+.btn-listar{
+    padding: 7px 12px;
+    color: aliceblue;
+    background-color: brown;
+    border-radius: .7em;
+}
+
+.btn-listar:hover{
+    color:aliceblue;
+}
+
+.form{
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 1em 2em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 50%);
+}
+
+.Titulo{
+    font-size:2rem;
+    margin-bottom: .5em;
+}
+
+.cajitas{
+    margin-top:2.5em;
+    display: grid;
+    gap: 1em;
 }

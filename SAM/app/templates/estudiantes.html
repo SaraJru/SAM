@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../static/CSS/bootstrap.css"> 
     <link rel="stylesheet" href="../static/CSS/estilos.css">
+    <script src="http://code.jquery.com/jquery.js"></script> 
     <title>Home</title>
 </head>
 <body>
@@ -12,29 +12,60 @@
         <div class="container">
             <nav class="navg navbar-expand-lg navbar-light bg-dark p-4">
                 <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav w-100 justify-content-center">
-
-                    <a class="nav-link active" aria-current="page" href="../templates/home.html">Home     |</a>
-                    <a class="nav-link" href="../templates/estudiantes.html">Estudiantes     |</a>
-                    <a class="nav-link" href="../templates/administradores.html">Administradores     |</a>
-                    <a class="nav-link" href="../templates/AcercaDe.html">Acerca de</a>
-                    </div>
+                    <li class="nav-item">    
+                        <a class="nav-link active" aria-current="page" href="../templates/home.html">Home     |</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="../templates/estudiantes.html" data-bs-toggle="dropdown" aria-expanded="false">Estudiantes     |</a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Promedio</a></li>
+                            </ul>
+                    </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="../templates/administradores.html">Administradores     |</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../templates/AcercaDe.html">Acerca de</a>
+                    </li>
+                </div>
                 </div>
                 </div>
         </nav> 
 </div>
-<br>
-<table class="table table-dark table table-hover">
+<div id="FormularioEstudiantes">
+    <br/>
+    <form class="form" id="formulario">
+        <h2 class="Titulo">Datos estudiantes</h2>
+        <div class="cajitas">
+        <label for="id">ID:</label>
+        <input type="text" id="id">    
+        <label for="name">Nombre:</label>
+        <input type="text" id="name">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido">
+        <label for="email">Email:</label>
+        <input type="text" id="email">
+        <label for="facultad">Facultad:</label>
+        <input type="text" id="Facultad">
+        <button class="btn btn-guardar mt-2" type="submit" id="btnGuardar">Guardar</button>
+        <button class="btn btn-listar mt-2" type="submit" id="btnListar">Listar estudiantes</button>
+        <!-- <a href="" class="btn btn-listar  mt-2"><span>Listar estudiantes</span></a> -->
+        </div>
+    </form>
+</div>
+<br/>
+<br/>
+<table class="table table-dark table table-hover" id="tablaEs">
     <thead class="table-dark">
     <tr>
-        <th scope="col">#</th>
+        <th scope="col">ID</th>
         <th scope="col">Nombre</th>
         <th scope="col">Apellido</th>
-        <!-- <th scope="col">Handle</th>  -->
+        <th scope="col">Email</th> 
+        <th scope="col">Facultad</th>
     </tr>
     </thead>
     <tbody>
@@ -42,27 +73,101 @@
         <th scope="row">1</th>
         <td>Mufasa</td>
         <td>Ramirez</td>
-    
+        <td>Gatonene@gmail.com</td> 
+        <td>Ingenieria</td>
     </tr>
     <tr>
         <th scope="row">2</th>
         <td>Chloe</td>
         <td>Ramirez</td>
-        
+        <td>Gatanena@gmail.com</td>
+        <td>Ingenieria</td>
     </tr>
     <tr>
         <th scope="row">3</th>
         <td>Marta</td>
         <td>Ramirez</td> 
-        <!-- <td>@twitter</td> -->
+        <td>VacaLola@gmail.com</td> 
+        <td>Ingenieria</td>
     </tr>
     </tbody>
 </table> 
 <br>
-
-    <a href="" class="btn btn-agregar d-grid gap-2 col-6 mx-auto"><span>Agregar estudiantes</span></a>
-</body>
+<div class="container" id="Agregar">
+    <a class="btn btn-agregar d-grid gap-2 col-6 mx-auto" id="btnAgregar"><span>Agregar estudiantes</span></a>   
+</div>
 <br>
+<div class="container" id="divPromediar">
+    <a class="btn btn-agregar d-grid gap-2 col-6 mx-auto" id="btnPromediar"><span>Promediar calificaciones</span></a>   
+</div>
+
+<table class="table table-dark table table-hover" id="tablaPromedio">
+    <thead class="table-dark">
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Calificacion 1</th>
+        <th scope="col">Calificacion 2</th> 
+        <th scope="col">Promedio</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">1</th>
+        <td>Mufasa</td>
+        <td>100</td>
+        <td>80</td> 
+        <td class="promedio"></td>
+    </tr>
+    <tr>
+        <th scope="row">2</th>
+        <td>Chloe</td>
+        <td>50</td>
+        <td>80</td>
+        <td class ="promedio"></td>
+    </tr>
+    <tr>
+        <th scope="row">3</th>
+        <td>Marta</td>
+        <td>70</td> 
+        <td>85</td> 
+        <td class="promedio"></td>
+    </tr>
+    <tr>
+        <th scope="row">4</th>
+        <td>Luna</td>
+        <td>50</td> 
+        <td>5</td> 
+        <td class="promedio"></td>
+    </tr>
+    <tr>
+        <th scope="row">5</th>
+        <td>Aaron</td>
+        <td>40</td> 
+        <td>10</td> 
+        <td class="promedio"></td>
+    </tr>
+    </tbody>
+</table>
+<br> 
+<div id="divPromedio">
+<a class="btn btn-guardar d-grid gap-2 col-6 mx-auto" id="btnPromedio"><span>Calcular promedio</span></a>
+</div>
+<br>
+<div class="alert alert-success" role="alert" id="alertaAprobados">
+    <h4 class="alert-heading">Estudiantes aprobados!</h4>    
+</div>
+
+<div class="alert alert-danger" role="alert" id="alertaReprobados">
+    <h4 class="alert-heading">Estudiantes reprobados</h4>
+</div>
+<div class="container">
+    
+</div>
+</header>
+<script src="../static/Scripts/funcionalidad.js"></script>
+    
+</body>
 <!-- <footer class="bg-dark text-white pt-5 pb-4">
     <div class="container text-center text-md-left">
         <div class="row text-center text-md-left">
