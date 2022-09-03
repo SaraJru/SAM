@@ -5,32 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     {% load static %}
     <link rel="stylesheet" href="{% static 'CSS/bootstrap.css' %}"> 
+    <link rel="stylesheet" href="{% static 'CSS/estilos.css' %}"> 
     <title>Home</title>
 </head>
 <body>
-    <h1 class="fst-italic">Bienvenidos</h1>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="{% url 'home'%}">Home     |</a>
-            <a class="nav-link" href="{% url 'estudiantes'%}">Estudiantes     |</a>
-            <a class="nav-link" href="{% url 'administradores'%}">Administradores     |</a>
-            <a class="nav-link" href="{% url 'AcercaDe'%}">Acerca de</a>
-            </div>
-        </div>
-        </div>
-    </nav>
-    <div>
+    
+    <header class="header bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <nav class="navg navbar-expand-lg navbar-light bg-dark p-4">
+                <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav w-100 justify-content-center">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" aria-current="page" href="{% url 'home'%}">Home     |</a>
+                            <a class="nav-link" href="{% url 'estudiantes'%}">Estudiantes     |</a>
+                            <a class="nav-link" href="{% url 'administradores'%}">Administradores     |</a>
+                            <a class="nav-link" href="{% url 'AcercaDe'%}">Acerca de</a>
+                    </div>
+                </div>
+                </div>
+        </nav>
         {%block contenido%}
         {%endblock contenido%}
-    </div>
+</div>
 </body>
-<footer>
-    <script src="{% static 'Scripts/bootstrap.js' %}"></script>
-</footer>
 </html>
