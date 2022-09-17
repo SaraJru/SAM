@@ -1,0 +1,35 @@
+{%extends 'base.html' %}
+{%block contenido%}
+
+<form method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" name="nombre">
+    </div>
+    <div class="mb-3">
+        <label for="apellido" class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="apellido" name="apellido">
+    </div>
+    <div class="mb-3">
+        <label for="rol" class="form-label">Rol</label>
+        <input type="text" class="form-control" id="rol" name="rol">
+    </div>
+    <button type="submit" class="btn btn-primary" name="guardar">Guardar</button>
+</form>
+
+
+<form method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="titulo" class="form-label">Titulo</label>
+        <input type="text" class="form-control" id="titulo" aria-describedby="emailHelp" name="titulo">
+    </div>
+    <div class="mb-3">
+        <label for="descripcion" class="form-label">Descripcion</label>
+        <input type="text" class="form-control" id="descripcion" name="descripcion">
+    </div>
+    <button type="submit" class="btn btn-primary" name="publicar">Publicar</button>
+</form>
+
+{%endblock contenido%}

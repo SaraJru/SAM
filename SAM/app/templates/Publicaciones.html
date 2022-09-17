@@ -1,0 +1,13 @@
+{%extends 'base.html' %}
+{%block contenido%}
+
+{% for publicacion in publicaciones_list %}
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 style="color: black" class="card-title">{{publicacion.titulo}}</h5>
+        <p style="color: black" class="card-text">{{publicacion.descripcion}}</p>
+    </div>
+</div>
+{%endfor%}
+
+{%endblock contenido%}

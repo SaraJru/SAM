@@ -10,25 +10,15 @@
     </tr>
     </thead>
     <tbody>
+        {% for estudiante in estudiantes_list %}
+        {% if estudiante.rol == 1 %}
     <tr>
-        <th scope="row">1</th>
-        <td>Mufasa</td>
-        <td>Ramirez</td>
-        <!-- <td>@mdo</td> -->
+        <th scope="row">{{estudiante.id}}</th>
+        <td>{{estudiante.nombre}}</td>
+    <td>{{estudiante.apellido}}</td>
     </tr>
-    <tr>
-        <th scope="row">2</th>
-        <td>Chloe</td>
-        <td>Ramirez</td>
-        
-        <!-- <td>@fat</td> -->
-    </tr>
-    <tr>
-        <th scope="row">3</th>
-        <td>Marta</td>
-        <td>Ramirez</td>
-        <!-- <td>@twitter</td> -->
-    </tr>
+    {%endif%}
+    {%endfor%}
     </tbody>
 </table>
 {%endblock contenido%}
