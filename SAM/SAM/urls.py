@@ -15,14 +15,16 @@ Including another URLconf
 """
 
 from unicodedata import name
+
 from django.contrib import admin
-from django.urls import path
+from django.urls import path , include
 
 # Vista Home
 from app import views
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('', views.home, name='home'),
     path('estudiantes/', views.estudiantes.as_view(), name='estudiantes'),
     path('administradores/', views.administradores.as_view(), name='administradores'),
@@ -30,5 +32,4 @@ urlpatterns = [
     path('publis/', views.publicaciones.as_view(), name='Publicaciones'),
     path('creaciones/', views.Creaciones, name='Creaciones'),
     path('est/', views.CrearEstudiante ,name='CrearEstudiantes')
-
 ]

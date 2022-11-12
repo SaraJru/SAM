@@ -7,7 +7,9 @@ from django.views import generic
 
 from app.models import Publicaciones, Estudiantes
 
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def home (request):
     assert isinstance(request, HttpRequest)
     return render(
